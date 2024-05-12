@@ -1,0 +1,47 @@
+body {
+  padding-top: 56px;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    padding-top: 8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    padding-top: 6.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 3.5rem;
+  }
+}
+
+/*
+#products-container {
+  flex: 2 0 0%;
+}
+
+#cart-container {
+  gap: 2em;
+}
+
+.product-body {
+  flex: 4 0 0%;
+}
+
+.img-cart {
+  align-self: center;
+}
+*/
+
+li::marker {
+  font-size: 0;
+}
+
+a {
+  text-decoration: none;
+}

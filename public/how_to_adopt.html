@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How to Adopt</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootsrap Icons v1.11.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        color: #155724;
+        text-align: center;
+      }
+      h2 {
+        color: #155724;
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      a {
+        color: #007bff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        max-width: 700px;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand ms-3 me-3" href="./index.html">
+          <img
+            src="./assets/images/logo.png"
+            alt="Adopt a Pet logo"
+            width="70px"
+            height="70px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsible-nav-1"
+          aria-controls="collapsible-nav-1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+
+        <div class="collapse navbar-collapse" id="collapsible-nav-1">
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="./pet_list.html"
+                aria-current="page"
+                >Pets <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./whishlist.html">Wishlist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./profile.html">Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbar-dropdown-1"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >More</a
+              >
+
+              <div class="dropdown-menu" aria-labelledby="navbar-dropdown-1">
+                <a class="dropdown-item" href="./how_to_adopt.html"
+                  >How To Adopt</a
+                >
+                <a class="dropdown-item" href="./about_us.html">About Us</a>
+                <a class="dropdown-item" href="./terms.html"
+                  >Terms & Conditions</a
+                >
+              </div>
+            </li>
+          </ul>
+
+          <!-- Search bar -->
+          <form class="d-flex my-2 my-lg-0">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search product..."
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+
+          <div class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login-modal"
+                  style="color: green; font-size: 1.2em"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Login"
+                >
+                  <i
+                    class="bi bi-person-fill"
+                    style="font-size: 1.75em; color: green"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  style="margin-left: 10px"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Wishlist"
+                >
+                  <i
+                    class="bi bi-heart-fill"
+                    style="font-size: 1.75em; color: green"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal Components -->
+      <!-- Login modal body -->
+      <div
+        class="modal fade"
+        id="login-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="login-modal"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="login-modal-title">Log In</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <label for="input-email-1" class="form-label">Email</label>
+                <div class="input-group mb-3">
+                  <input
+                    required
+                    type="email"
+                    class="form-control"
+                    name="input-email-1"
+                    id="input-email-1"
+                    aria-describedby="emailHelpId"
+                    placeholder="Enter your email"
+                  />
+
+                  <span class="input-group-text" id="span-email-1"
+                    ><i class="bi bi-person-fill"></i
+                  ></span>
+                </div>
+
+                <label for="input-password-1" class="form-label"
+                  >Password</label
+                >
+                <div class="input-group mb-3">
+                  <input
+                    required
+                    type="password"
+                    class="form-control"
+                    name="input-password-1"
+                    id="input-password-1"
+                    placeholder="Enter your password"
+                  />
+
+                  <span class="input-group-text" id="span-password-1"
+                    ><i class="bi bi-key-fill"></i
+                  ></span>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    required
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="input-checkbox-1"
+                  />
+                  <label class="form-check-label" for="input-checkbox-1">
+                    Remember me
+                  </label>
+                </div>
+
+                <div id="btn-login-1">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>
+                Don't have an account?
+                <a
+                  class="link"
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-signup"
+                >
+                  Sign up here
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign up modal body -->
+      <div
+        class="modal fade"
+        id="modal-signup"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-signup-title"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-signup-title">Sign Up</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="input-name-1"
+                      id="input-name-1"
+                      aria-describedby="helpId"
+                      placeholder="First name"
+                    />
+                  </div>
+
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="input-lastname-1"
+                      id="input-lastname-1"
+                      aria-describedby="helpId"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="input-email-2"
+                    id="input-email-2"
+                    aria-describedby="emailHelpId"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="input-password-2"
+                    id="input-password-2"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="input-confirm-password-1"
+                    id="input-confirm-password-1"
+                    placeholder="Confirm password"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <br /><br><br>
+        <h1>How to Adopt a Pet</h1>
+        <br /><br />
+
+        <img src="./assets/images/adoption.jpg" alt="adopting" />
+
+        <br /><br />
+        <ol>
+          <li>
+            <h2>1. Go to our "Pets" page</h2>
+            <p>
+              Go to the list of <a href="pets_list.html">pets</a> and select the
+              one you're interested in.
+            </p>
+          </li>
+          <li></li>
+          <li>
+            <h2>2. Select the Pet of Your Choice</h2>
+            <p>
+              Browse through our list of available pets and select the one that
+              captures your heart.
+            </p>
+          </li>
+
+          <li>
+            <h2>3. Contact Owner or Add to Wishlist</h2>
+            <p>
+              Once you've found a pet you're interested in, you can either
+              contact the owner for more information or add the pet to your
+              wishlist.
+            </p>
+          </li>
+
+          <li>
+            <h2>4. Go to Wishlist</h2>
+            <p>
+              Visit your wishlist to review the pets you've saved for future
+              consideration.
+            </p>
+          </li>
+
+          <li>
+            <h2>5. Select the Pet You Want to Adopt</h2>
+            <p>From your wishlist, choose the pet you're ready to adopt.</p>
+          </li>
+
+          <li>
+            <h2>6. Submit the Adoption Application</h2>
+            <p>
+              Complete and submit the adoption application form provided by the
+              shelter.
+            </p>
+          </li>
+
+          <li>
+            <h2>7. Contact Owner</h2>
+            <p>
+              Owners may require additional information or may want to ask you
+              questions to verify you'll be a caring and loving owner.
+            </p>
+          </li>
+
+          <li>
+            <h2>8. Home Visit</h2>
+            <p>
+              Some shelters may require a home visit to ensure the pet will have
+              a safe and suitable environment.
+            </p>
+          </li>
+
+          <li>
+            <h2>9. Sign Adoption Contract</h2>
+            <p>
+              Review and sign an adoption contract outlining your
+              responsibilities as a pet owner.
+            </p>
+          </li>
+
+          <li>
+            <h2>10. Take Your Pet Home or Arrange Delivery</h2>
+            <p>
+              Congratulations! Take your new furry friend home or arrange for
+              the owner to drop them off at your home.
+            </p>
+          </li>
+
+          <li>
+            <h2>11. Follow-Up Care</h2>
+            <p>
+              Follow any instructions provided by the shelter for post-adoption
+              care and support.
+            </p>
+          </li>
+        </ol>
+
+        <h2>Requirements for Adoption</h2>
+        <ul>
+          <li>Minimum age of 18 years old</li>
+          <li>Proof of identification (e.g., driver's license or ID card)</li>
+          <li>Proof of residence (e.g., utility bill or lease agreement)</li>
+          <li>Consent from all household members</li>
+          <li>Approval from landlord (if renting)</li>
+          <li>Ability to provide a stable and loving home</li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

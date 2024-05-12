@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adoption Requests</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootsrap Icons v1.11.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Custom styles -->
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a
+          class="navbar-brand ms-3 me-3"
+          href="./index.html"
+        >
+          <img
+            src="./assets/images/logo.png"
+            alt="Adopt a Pet logo"
+            width="70px"
+            height="70px"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsible-nav-1"
+          aria-controls="collapsible-nav-1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+
+        <div
+          class="collapse navbar-collapse"
+          id="collapsible-nav-1"
+        >
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="./pet_list.html"
+                aria-current="page"
+                >Pets <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./whishlist.html"
+                >Wishlist</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="./profile.html"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbar-dropdown-1"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >More</a
+              >
+
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbar-dropdown-1"
+              >
+                <a
+                  class="dropdown-item"
+                  href="./how_to_adopt.html"
+                  >How To Adopt</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="./about_us.html"
+                  >About Us</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="./terms.html"
+                  >Terms & Conditions</a
+                >
+              </div>
+            </li>
+          </ul>
+
+          <!-- Search bar -->
+          <form class="d-flex my-2 my-lg-0">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search product..."
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+
+          <div class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#login-modal"
+                  style="color: green; font-size: 1.2em"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Login"
+                >
+                  <i
+                    class="bi bi-person-fill"
+                    style="font-size: 1.75em; color: green"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  style="margin-left: 10px"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Wishlist"
+                >
+                  <i
+                    class="bi bi-heart-fill"
+                    style="font-size: 1.75em; color: green"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal Components -->
+      <!-- Login modal body -->
+      <div
+        class="modal fade"
+        id="login-modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="login-modal"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="login-modal-title"
+              >
+                Log In
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <label
+                  for="input-email-1"
+                  class="form-label"
+                  >Email</label
+                >
+                <div class="input-group mb-3">
+                  <input
+                    required
+                    type="email"
+                    class="form-control"
+                    name="input-email-1"
+                    id="input-email-1"
+                    aria-describedby="emailHelpId"
+                    placeholder="Enter your email"
+                  />
+
+                  <span
+                    class="input-group-text"
+                    id="span-email-1"
+                    ><i class="bi bi-person-fill"></i
+                  ></span>
+                </div>
+
+                <label
+                  for="input-password-1"
+                  class="form-label"
+                  >Password</label
+                >
+                <div class="input-group mb-3">
+                  <input
+                    required
+                    type="password"
+                    class="form-control"
+                    name="input-password-1"
+                    id="input-password-1"
+                    placeholder="Enter your password"
+                  />
+
+                  <span
+                    class="input-group-text"
+                    id="span-password-1"
+                    ><i class="bi bi-key-fill"></i
+                  ></span>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    required
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="input-checkbox-1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="input-checkbox-1"
+                  >
+                    Remember me
+                  </label>
+                </div>
+
+                <div id="btn-login-1">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>
+                Don't have an account?
+                <a
+                  class="link"
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-signup"
+                >
+                  Sign up here
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign up modal body -->
+      <div
+        class="modal fade"
+        id="modal-signup"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-signup-title"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5
+                class="modal-title"
+                id="modal-signup-title"
+              >
+                Sign Up
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="input-name-1"
+                      id="input-name-1"
+                      aria-describedby="helpId"
+                      placeholder="First name"
+                    />
+                  </div>
+
+                  <div class="col-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="input-lastname-1"
+                      id="input-lastname-1"
+                      aria-describedby="helpId"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="input-email-2"
+                    id="input-email-2"
+                    aria-describedby="emailHelpId"
+                    placeholder="Email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="input-password-2"
+                    id="input-password-2"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="input-confirm-password-1"
+                    id="input-confirm-password-1"
+                    placeholder="Confirm password"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-success"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <br />
+
+    <main>
+      <div class="container mt-5">
+        <h1
+          class="text-center mb-5 p-3 bg-success text-white"
+          id="pet-name"
+        ></h1>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="card">
+              <div
+                class="card-body"
+                id="body-requests"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <colgroup>
+                      <col style="width: 40%" />
+                      <col style="width: 60%" />
+                    </colgroup>
+                    <tbody id="requests-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="requests.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
