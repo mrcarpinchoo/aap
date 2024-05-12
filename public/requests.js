@@ -1,6 +1,8 @@
 async function fetchRequests(uuid) {
     try {
-        const response = await fetch(`http://localhost:4000/api/pets/${uuid}`);
+        const response = await fetch(
+            `https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`
+        );
         const pet = await response.json();
         return pet;
     } catch (error) {
@@ -18,7 +20,7 @@ async function renderRequest(pet) {
     if (requestId) {
         try {
             const requestData = await fetch(
-                `http://localhost:4000/api/requests/request/${requestId}`
+                `https://adopt-a-pet-e5cr.onrender.com//api/requests/request/${requestId}`
             );
             const requestDataJson = await requestData.json();
             if (requestDataJson.userEmail) {
@@ -36,7 +38,7 @@ async function renderRequest(pet) {
         }
 
         const requestData = await fetch(
-            `http://localhost:4000/api/requests/request/${requestId}`
+            `https://adopt-a-pet-e5cr.onrender.com//api/requests/request/${requestId}`
         );
         const requestDataJson = await requestData.json();
         const requestBody = document.getElementById('requests-body');

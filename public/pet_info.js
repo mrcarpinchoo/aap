@@ -1,6 +1,8 @@
 async function fetchPetInfo(uuid) {
     try {
-        const response = await fetch(`http://localhost:4000/api/pets/${uuid}`);
+        const response = await fetch(
+            `https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`
+        );
         const pet = await response.json();
         return pet;
     } catch (error) {
@@ -17,7 +19,7 @@ async function renderPetInfo(pet) {
     if (imageId) {
         try {
             const imageData = await fetch(
-                `http://localhost:4000/api/images/image/${imageId}`
+                `https://adopt-a-pet-e5cr.onrender.com//api/images/image/${imageId}`
             );
             const imageDataJson = await imageData.json();
             if (imageDataJson.url) {
@@ -163,7 +165,7 @@ async function addPetToWishlist(el) {
 }
 
 async function addPet(uuid) {
-    const url = `http://localhost:4000/api/wishlists/my-wishlist/add/${uuid}`;
+    const url = `https://adopt-a-pet-e5cr.onrender.com//api/wishlists/my-wishlist/add/${uuid}`;
 
     try {
         const res = await fetch(url, {

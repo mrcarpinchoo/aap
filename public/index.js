@@ -19,7 +19,7 @@ const inputPasswordSignUp = document.getElementById('input-password-sign-up');
 btnLogin.addEventListener('click', async e => {
     e.preventDefault();
 
-    const url = 'http://localhost:4000/api/auth/login';
+    const url = 'https://adopt-a-pet-e5cr.onrender.com//api/auth/login';
     const body = {
         email: inputEmailLogin.value,
         password: inputPasswordLogin.value
@@ -60,7 +60,7 @@ btnLogin.addEventListener('click', async e => {
 btnSignUp.addEventListener('click', async e => {
     e.preventDefault();
 
-    const url = 'http://localhost:4000/api/users';
+    const url = 'https://adopt-a-pet-e5cr.onrender.com//api/users';
     const body = {
         name: inputNameSignUp.value,
         location: inputLocationSignUp.value,

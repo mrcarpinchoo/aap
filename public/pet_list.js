@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     const pagination = document.getElementById('pet-pagination');
 
     async function fetchPets() {
-        const res = await fetch('http://localhost:4000/api/pets', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
+        const res = await fetch(
+            'https://adopt-a-pet-e5cr.onrender.com//api/pets',
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             }
-        });
+        );
         const pets = await res.json();
         return pets;
     }
@@ -63,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const imageId = pet.images[0];
                 try {
                     const imageData = await fetch(
-                        `http://localhost:4000/api/images/image/${imageId}`
+                        `https://adopt-a-pet-e5cr.onrender.com//api/images/image/${imageId}`
                     );
                     const imageDataJson = await imageData.json();
                     if (imageDataJson.url) {
@@ -146,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 .getElementById('conditions-filter')
                 .value.trim();
 
-            let url = 'http://localhost:4000/api/pets?';
+            let url = 'https://adopt-a-pet-e5cr.onrender.com//api/pets?';
             let filterApplied = false;
 
             if (breed) {
