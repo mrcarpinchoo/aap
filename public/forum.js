@@ -1,7 +1,7 @@
 async function fetchMessages(uuid) {
     try {
         const response = await fetch(
-            `https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`
+            `https://adopt-a-pet-e5cr.onrender.com/api/pets/${uuid}`
         );
         const pet = await response.json();
         return pet;
@@ -17,7 +17,7 @@ async function renderMessages(pet) {
     if (messageId) {
         try {
             const messageData = await fetch(
-                `https://adopt-a-pet-e5cr.onrender.com//api/messages/message/${messageId}`
+                `https://adopt-a-pet-e5cr.onrender.com/api/messages/message/${messageId}`
             );
             const messageDataJson = await messageData.json();
             if (messageDataJson.userEmail) {
@@ -40,7 +40,7 @@ async function renderMessages(pet) {
     ).innerText = `Messages about ${pet.name}`;
 
     const messageData = await fetch(
-        `https://adopt-a-pet-e5cr.onrender.com//api/messages/message/${messageId}`
+        `https://adopt-a-pet-e5cr.onrender.com/api/messages/message/${messageId}`
     );
     const messageDataJson = await messageData.json();
     const messageBody = document.getElementById('messages-body');

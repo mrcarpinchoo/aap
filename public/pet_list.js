@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     async function fetchPets() {
         const res = await fetch(
-            'https://adopt-a-pet-e5cr.onrender.com//api/pets',
+            'https://adopt-a-pet-e5cr.onrender.com/api/pets',
             {
                 method: 'GET',
                 headers: {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const imageId = pet.images[0];
                 try {
                     const imageData = await fetch(
-                        `https://adopt-a-pet-e5cr.onrender.com//api/images/image/${imageId}`
+                        `https://adopt-a-pet-e5cr.onrender.com/api/images/image/${imageId}`
                     );
                     const imageDataJson = await imageData.json();
                     if (imageDataJson.url) {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 .getElementById('conditions-filter')
                 .value.trim();
 
-            let url = 'https://adopt-a-pet-e5cr.onrender.com//api/pets?';
+            let url = 'https://adopt-a-pet-e5cr.onrender.com/api/pets?';
             let filterApplied = false;
 
             if (breed) {

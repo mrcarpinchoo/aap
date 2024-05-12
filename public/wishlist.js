@@ -19,7 +19,7 @@ async function init() {
 
 async function fetchWishlist() {
     const url =
-        'https://adopt-a-pet-e5cr.onrender.com//api/wishlists/my-wishlist';
+        'https://adopt-a-pet-e5cr.onrender.com/api/wishlists/my-wishlist';
 
     try {
         const res = await fetch(url, {
@@ -49,7 +49,7 @@ async function renderWishlist(wishlist) {
 
 async function fetchWishlistPets(wishlist) {
     const petsPromises = wishlist.pets.map(async pet => {
-        const url = `https://adopt-a-pet-e5cr.onrender.com//api/pets/${pet}`;
+        const url = `https://adopt-a-pet-e5cr.onrender.com/api/pets/${pet}`;
 
         try {
             const res = await fetch(url, {
@@ -145,7 +145,7 @@ async function buildCardComponents(pets) {
 }
 
 async function fetchImage(petUUID) {
-    const url = `https://adopt-a-pet-e5cr.onrender.com//api/images/${petUUID}`;
+    const url = `https://adopt-a-pet-e5cr.onrender.com/api/images/${petUUID}`;
 
     try {
         const res = await fetch(url);
@@ -181,7 +181,7 @@ function removePetFromWishlist(el) {
 }
 
 async function removePet(uuid) {
-    const url = `https://adopt-a-pet-e5cr.onrender.com//api/wishlists/my-wishlist/remove/${uuid}`;
+    const url = `https://adopt-a-pet-e5cr.onrender.com/api/wishlists/my-wishlist/remove/${uuid}`;
 
     try {
         const res = await fetch(url, {

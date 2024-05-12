@@ -8,7 +8,7 @@ async function fetchUserPets() {
     console.log(userEmail);
 
     const res = await fetch(
-        `https://adopt-a-pet-e5cr.onrender.com//api/pets?ownerEmail=${userEmail}`,
+        `https://adopt-a-pet-e5cr.onrender.com/api/pets?ownerEmail=${userEmail}`,
         {
             method: 'GET',
             headers: {
@@ -53,7 +53,7 @@ async function renderPetCard(pet) {
     if (imageId) {
         try {
             const imageData = await fetch(
-                `https://adopt-a-pet-e5cr.onrender.com//api/images/image/${imageId}`
+                `https://adopt-a-pet-e5cr.onrender.com/api/images/image/${imageId}`
             );
             const imageDataJson = await imageData.json();
             if (imageDataJson.url) {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (result.isConfirmed) {
                     try {
                         const response = await fetch(
-                            `https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`,
+                            `https://adopt-a-pet-e5cr.onrender.com/api/pets/${uuid}`,
                             {
                                 method: 'DELETE',
                                 headers: {
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const uuid = event.target.dataset.uuid;
             editPetModal.classList.add('show');
             editPetModal.style.display = 'block';
-            fetch(`https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`)
+            fetch(`https://adopt-a-pet-e5cr.onrender.com/api/pets/${uuid}`)
                 .then(response => response.json())
                 .then(pet => {
                     editPetNameInput.value = pet.name;
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             const response = await fetch(
-                `https://adopt-a-pet-e5cr.onrender.com//api/pets/${uuid}`,
+                `https://adopt-a-pet-e5cr.onrender.com/api/pets/${uuid}`,
                 {
                     method: 'PUT',
                     headers: {
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             const petResponse = await fetch(
-                'https://adopt-a-pet-e5cr.onrender.com//api/pets',
+                'https://adopt-a-pet-e5cr.onrender.com/api/pets',
                 {
                     method: 'POST',
                     headers: {
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             const imageResponse = await fetch(
-                `https://adopt-a-pet-e5cr.onrender.com//api/images/${uuid}`,
+                `https://adopt-a-pet-e5cr.onrender.com/api/images/${uuid}`,
                 {
                     method: 'POST',
                     headers: {
@@ -388,7 +388,7 @@ async function init() {
 }
 
 async function fetchUser() {
-    const url = 'https://adopt-a-pet-e5cr.onrender.com//api/users';
+    const url = 'https://adopt-a-pet-e5cr.onrender.com/api/users';
 
     try {
         const res = await fetch(url, {
@@ -446,7 +446,7 @@ function renderProfile(user) {
 }
 
 async function updateUser(name, location) {
-    const url = 'https://adopt-a-pet-e5cr.onrender.com//api/users';
+    const url = 'https://adopt-a-pet-e5cr.onrender.com/api/users';
 
     const body = {
         name,
